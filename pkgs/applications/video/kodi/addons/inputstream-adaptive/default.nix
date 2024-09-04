@@ -19,6 +19,8 @@ buildKodiBinaryAddon rec {
     sha256 = "sha256-ub4ep89datfr8aZLZAfoz7zhOizGFpzgp2PVON6Ptj8=";
   };
 
+  patches = [ ./awawa.patch ];
+
   extraCMakeFlags = [
     "-DENABLE_INTERNAL_BENTO4=ON"
     "-DBENTO4_URL=${bento4}"

@@ -1,0 +1,12 @@
+diff --git a/src/decrypters/widevine/WVDecrypter.cpp b/src/decrypters/widevine/WVDecrypter.cpp
+index 3f9c5dee..1daac7e5 100644
+--- a/src/decrypters/widevine/WVDecrypter.cpp
++++ b/src/decrypters/widevine/WVDecrypter.cpp
+@@ -46,6 +46,7 @@ bool CWVDecrypter::Initialize()
+   // and we need the RTLD_GLOBAL flag.
+   std::string binaryPath;
+   std::vector<kodi::vfs::CDirEntry> items;
++LOG::LogF(LOGERROR, "AWAWA: %s", FILESYS::GetAddonPath());
+   if (kodi::vfs::GetDirectory(FILESYS::GetAddonPath(), "", items))
+   {
+     for (auto item : items)
